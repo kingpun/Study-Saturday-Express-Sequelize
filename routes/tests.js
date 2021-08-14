@@ -46,8 +46,7 @@ router.delete("/:id", async (req, res, next) => {
     await Test.destroy({
       where: { id: req.params.id },
     });
-    res.status(204).send()
-   
+    res.status(204).send();
   } catch (err) {
     next(err);
   }
